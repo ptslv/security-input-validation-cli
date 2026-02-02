@@ -1,0 +1,10 @@
+email,test@example.com
+email,test@@example.com
+phone,79881587856
+phone,123
+inn,1234567890
+inn,123
+ogrnip,123456789012345
+ogrnip,123
+bik,044525225
+bik,0445

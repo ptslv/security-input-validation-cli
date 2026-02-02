@@ -73,3 +73,34 @@ def get_valid_correspondent_account():
             return correspondent_account
         else:
             print('Пожалуйста, введите корректный корреспондентский счет (20 цифр).')
+
+def is_valid_age(value: str) -> bool:
+    try:
+        return int(value) > 0
+    except ValueError:
+        return False
+
+def is_valid_postal_code(value: str) -> bool:
+    return value.isdigit() and len(value) == 6
+
+def is_valid_phone(value: str) -> bool:
+    digits = ''.join(c for c in value if c.isdigit())
+    return len(digits) == 11 and digits.startswith('7')
+
+def is_valid_email(value: str) -> bool:
+    return value.count('@') == 1 and ' ' not in value
+
+def is_valid_ogrnip(value: str) -> bool:
+    return value.isdigit() and len(value) == 15
+
+def is_valid_inn(value: str) -> bool:
+    return value.isdigit() and (len(value) == 10 or len(value) == 12)
+
+def is_valid_account_number(value: str) -> bool:
+    return value.isdigit() and len(value) == 20
+
+def is_valid_bik(value: str) -> bool:
+    return value.isdigit() and len(value) == 9
+
+def is_valid_correspondent_account(value: str) -> bool:
+    return value.isdigit() and len(value) == 20            
